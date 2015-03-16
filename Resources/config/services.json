@@ -1,0 +1,16 @@
+{
+	"services": {
+		"silex.utilities.service": {
+			"class": "Silex.UtilitiesBundle.Services.Utilities",
+			"arguments": [
+				{ "type": "service", "id": "kernel.container" },
+				{ "type": "service", "id": "kernel.config" },
+				{ "type": "service", "id": "kernel.dispatcher" }
+			],
+			"events": [
+				{ "listener": "kernel.ready", "method": "onKernelReady", "priority": 15 }
+			],
+			"priority": 15
+		}
+	}
+}
